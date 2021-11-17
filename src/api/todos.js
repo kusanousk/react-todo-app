@@ -18,6 +18,6 @@ export const deleteTodoData = async (id) => {
 };
 
 export const updateTodoData = async (id, todo) => {
-  const response = await axios.put(`${todoDataUrl}/${id}`);
+  const response = await axios.put(`${todoDataUrl}/${id}`, todo);
   return response.data;
 };

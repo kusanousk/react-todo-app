@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ulid } from "ulid";
-import * as todoData from "../api/todos";
+import * as todoData from "../apis/todos";
 
 export const useTodo = () => {
   const [todoList, setTodoList] = useState([]);

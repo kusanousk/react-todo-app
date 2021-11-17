@@ -18,7 +18,7 @@ export const useTodo = () => {
 
     todoData.updateTodoData(id, newTodoItem).then((updatedTodo) => {
       const newTodoList = todoList.map((item) =>
-        item.id !== updatedTodo ? item : updatedTodo
+        item.id !== updatedTodo.id ? item : updatedTodo
       );
 
       setTodoList(newTodoList);

@@ -1,3 +1,4 @@
+import { List } from "@chakra-ui/layout";
 import { TodoItem } from "./TodoItem";
 import { TodoTitle } from "./TodoTitle";
 
@@ -7,13 +8,14 @@ export const TodoList = ({
   deleteTodoListItem,
   title,
   as,
+  fontSize,
 }) => {
   return (
     <>
       {todoList.length !== 0 && (
         <>
-          <TodoTitle title={title} as={as} />
-          <ul>
+          <TodoTitle title={title} as={as} fontSize={fontSize} mt="12" />
+          <List w="full">
             {todoList.map((todo) => (
               <TodoItem
                 todo={todo}
@@ -22,7 +24,7 @@ export const TodoList = ({
                 deleteTodoListItem={deleteTodoListItem}
               />
             ))}
-          </ul>
+          </List>
         </>
       )}
     </>
